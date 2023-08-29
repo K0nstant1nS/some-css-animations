@@ -16,10 +16,9 @@
   font-size: 52px;
   font-weight: 700;
   color: #999999;
-  transition: color 2s;
 }
 
-.transform-text::before{
+/*.transform-text::before{
   content: var(--text);
   position: absolute;
   top: var(--top);
@@ -28,4 +27,4 @@
   transition: var(--transition-target) .5s;
   opacity: .5;
 }
-
+*/
