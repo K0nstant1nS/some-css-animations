@@ -50,13 +50,13 @@ export const disableTransition = (e) =>{
   e.style.transition = `none`;
 }
 
-export const spectateElement = (element) => {
+export const spectateElement = (element, xMax = null, yMax = null) => {
   element = createBeforeElement(element);
   const [beforeElement, mainElement] = element.children;
   const elementRect = mainElement.getBoundingClientRect();
   let isAnimationAreaAbandoned = false;
   const [elementCenterX, elementCenterY] = [elementRect.x + elementRect.width/2, elementRect.y + elementRect.height/2];
-  const [distanceX, distanceY] = [elementRect.width, elementRect.width];
+  const [distanceX, distanceY] = [ xMax || elementRect.width, yMax || elementRect.width];
   let translateX, translateY = 0;
   mainElement.style.transformStyle = 'preserve-3d';
 
